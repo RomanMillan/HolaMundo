@@ -16,22 +16,21 @@
   				<form action="calculadoraResultado.jsp" method="get">
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Numero 1</label>
-				    <input type="text" class="form-control" name="numero1">
+				    <input type="text" class="form-control" name="numero1" required>
 				  </div>
 				  <div class="form-group">
 				  	
-				  	<select class="form-select" aria-label="Default select example" name="op">
-					  <option selected>Operador</option>
-					  <option value="suma">+</option>
+				  	<select class="form-select" aria-label="Selecciones una operación" name="op">
+					  <option selected value="suma">+</option>
 					  <option value="resta">-</option>
 					</select>
 				  </div>
 				  <div class="form-group">
 				    <label for="exampleInputPassword1">Numero 2</label>
-				    <input type="text" class="form-control" name="numero2">
+				    <input type="text" class="form-control" name="numero2" required>
 				  </div>
 				  
-				  <button type="submit" class="btn btn-primary">Resultado</button>
+				  <button type="submit" class="btn btn-success">Resultado</button>
 				</form>	
   			</div>
   		</div>

@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
 	</head>
 	<body>
 	<h1>Resultado de la cuenta</h1>
@@ -13,22 +15,22 @@
 			double numero1 = Double.parseDouble(request.getParameter("numero1"));
 			double numero2 = Double.parseDouble(request.getParameter("numero2"));
 			String operacion = request.getParameter("op");
-			double resultado;
 			
 			Calculadora c = new Calculadora();
-			c.setNum1(numero1);
+			
 			
 			if(operacion.equals("suma")){
-				resultado = numero1 + numero2;
+				c.sumar(numero1, numero2);
 			}else{
-				resultado = numero1 - numero2;
+				c.restar(numero1, numero2);
 			}
 	
 		%>
 		
-		<p>El resultado es: <%=resultado %> </p>
+		<p>El resultado es: <%=c.getResult() %> </p>
 		
-		<a href="caculadora.jsp">Volver</a>
+		<a href='calculadora.jsp' class="btn btn-warning">Volver</a>
+	
 		
 	</body>
 </html>
